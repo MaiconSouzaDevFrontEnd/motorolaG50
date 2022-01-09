@@ -125,17 +125,12 @@ body {
           filter: invert(1);
 }
 
-.principal section.motog50 .container {
-  height: 480px;
-  width: 480px;
-}
-
 .principal section.motog50 .container img {
-  height: 100%;
   width: 100%;
 }
 
 .principal section.motog50 .container-texto {
-  text-align: center;
+  padding: 50px;
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */
