@@ -26,12 +26,15 @@ body {
           flex-flow: column;
 }
 
-.topo .banner {
+.topo .banner-box {
   background-color: #08344e;
-  padding: 10px;
 }
 
-.topo .banner .container {
+.topo .banner-box .banner {
+  overflow: hidden;
+}
+
+.topo .banner-box .banner .container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,14 +42,58 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-animation: banner 3s linear infinite;
-          animation: banner 3s linear infinite;
+}
+
+.topo .banner-box .banner .container .box {
+  position: relative;
+  -webkit-animation: banner 15s ease-in-out infinite;
+          animation: banner 15s ease-in-out infinite;
+}
+
+.topo .banner-box .banner .container .box p {
+  width: 500px;
+  text-align: center;
+}
+
+@-webkit-keyframes banner {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -500px;
+  }
+  80% {
+    left: -1000px;
+  }
+  100% {
+    left: -1500px;
+  }
+}
+
+@keyframes banner {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -500px;
+  }
+  80% {
+    left: -1000px;
+  }
+  100% {
+    left: -1500px;
+  }
 }
 
 .topo .logo {
   height: 50px;
   margin-top: 50px;
   text-align: center;
+}
+
+.topo .logo:hover {
+  -webkit-filter: drop-shadow(0 0 3px);
+          filter: drop-shadow(0 0 3px);
 }
 
 .topo .logo img {
@@ -56,17 +103,18 @@ body {
 }
 
 .topo .links {
-  margin-top: 30px;
-  padding-top: 30px;
+  margin-top: 50px;
 }
 
 .topo .links .container {
+  height: 100px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -76,22 +124,31 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
+  margin: 17px;
+  width: 180px;
+  padding: 5px;
+  border-radius: 30px;
+  border: 1px solid #fff;
 }
 
 .topo .links .container li:hover {
-  padding: 10px 20px;
-  border: 1px solid #fff;
-  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 30px tomato;
+          box-shadow: 0px 0px 30px tomato;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .topo .links .container li ion-icon {
-  padding-right: 10px;
+  margin-right: 10px;
   font-size: 22px;
 }
 
 .topo .links .container li a {
-  font-size: 19px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -126,11 +183,20 @@ body {
 }
 
 .principal section.motog50 .container img {
-  width: 100%;
+  width: 450px;
+}
+
+.principal section.motog50 .container img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .principal section.motog50 .container-texto {
   padding: 50px;
-  text-align: justify;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 /*# sourceMappingURL=style.css.map */
